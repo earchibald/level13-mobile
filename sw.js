@@ -12,7 +12,7 @@
  * src/config.js urlArgs, and the ?v= query on the css links in index.html.
  */
 
-var CACHE_VERSION = "0.6.3.m115";
+var CACHE_VERSION = "0.6.3.m116";
 var STATIC_CACHE = "l13-static-" + CACHE_VERSION;
 var SHELL_CACHE = "l13-shell-" + CACHE_VERSION;
 // unversioned on purpose: the sound files change essentially never, and the

@@ -9,15 +9,26 @@
 // CALLOUTS
 
 @callout-arrow-size: 7px;
+@callout-delay: 500ms;
+
+// callouts appear only after a delay: the element is displayed immediately, but an
+// animation holds it invisible for @callout-delay. Transitions cannot do this because
+// they do not run on an element that comes out of display: none.
+@keyframes callout-delay {
+	from { visibility: hidden; }
+	to { visibility: hidden; }
+}
 
 div.container-btn-action:hover + div.btn-callout, div.btn-callout:hover, .info-callout-target:hover + div.info-callout, div.info-callout:hover,
 div.container-btn-action:focus + div.btn-callout, div.btn-callout:focus, .info-callout-target:focus + div.info-callout, div.info-callout:focus {
 	display: block;
+	animation: callout-delay @callout-delay step-end;
 }
 
 .info-callout-target-side:hover + div.info-callout, .info-callout-target-side + div.info-callout:hover,
 .info-callout-target-side:focus + div.info-callout, .info-callout-target-side + div.info-callout:focus {
 	display: flex !important;
+	animation: callout-delay @callout-delay step-end;
 	justify-content: center;
 	align-items: center;
 }
@@ -55,7 +66,7 @@ div.info-callout {
 }
 
 .container-btn-action-disabled-reason .btn-callout-empty {
-	visibility: visible !important;
+	visibility: visible;
 }
 
 .info-callout-side + div.info-callout {

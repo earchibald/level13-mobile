@@ -1010,6 +1010,14 @@ body.dark #camp-overview .hotkey-hint {
   margin-left: 4px;
   vertical-align: 1px;
 }
+@keyframes callout-delay {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: hidden;
+  }
+}
 body.dark div.container-btn-action:hover + div.btn-callout,
 body.dark div.btn-callout:hover,
 body.dark .info-callout-target:hover + div.info-callout,
@@ -1019,12 +1027,14 @@ body.dark div.btn-callout:focus,
 body.dark .info-callout-target:focus + div.info-callout,
 body.dark div.info-callout:focus {
   display: block;
+  animation: callout-delay 500ms step-end;
 }
 body.dark .info-callout-target-side:hover + div.info-callout,
 body.dark .info-callout-target-side + div.info-callout:hover,
 body.dark .info-callout-target-side:focus + div.info-callout,
 body.dark .info-callout-target-side + div.info-callout:focus {
   display: flex !important;
+  animation: callout-delay 500ms step-end;
   justify-content: center;
   align-items: center;
 }
@@ -1058,7 +1068,7 @@ body.dark .btn-callout-empty {
   visibility: hidden;
 }
 body.dark .container-btn-action-disabled-reason .btn-callout-empty {
-  visibility: visible !important;
+  visibility: visible;
 }
 body.dark .info-callout-side + div.info-callout {
   max-width: unset;
@@ -3937,6 +3947,14 @@ body.sunlit #camp-overview .hotkey-hint {
   margin-left: 4px;
   vertical-align: 1px;
 }
+@keyframes callout-delay {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: hidden;
+  }
+}
 body.sunlit div.container-btn-action:hover + div.btn-callout,
 body.sunlit div.btn-callout:hover,
 body.sunlit .info-callout-target:hover + div.info-callout,
@@ -3946,12 +3964,14 @@ body.sunlit div.btn-callout:focus,
 body.sunlit .info-callout-target:focus + div.info-callout,
 body.sunlit div.info-callout:focus {
   display: block;
+  animation: callout-delay 500ms step-end;
 }
 body.sunlit .info-callout-target-side:hover + div.info-callout,
 body.sunlit .info-callout-target-side + div.info-callout:hover,
 body.sunlit .info-callout-target-side:focus + div.info-callout,
 body.sunlit .info-callout-target-side + div.info-callout:focus {
   display: flex !important;
+  animation: callout-delay 500ms step-end;
   justify-content: center;
   align-items: center;
 }
@@ -3985,7 +4005,7 @@ body.sunlit .btn-callout-empty {
   visibility: hidden;
 }
 body.sunlit .container-btn-action-disabled-reason .btn-callout-empty {
-  visibility: visible !important;
+  visibility: visible;
 }
 body.sunlit .info-callout-side + div.info-callout {
   max-width: unset;

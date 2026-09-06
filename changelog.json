@@ -1,6 +1,19 @@
 {
     "versions": [
         {
+            "version": "0.6.3.m116",
+            "requiredVersion": "0.6.1",
+            "phase": "beta",
+            "final": true,
+            "released": "2026-09-05",
+            "changes": [
+                {
+                    "type": "IMPROVEMENT",
+                    "summary": "Tooltips now wait half a second before they appear. They used to show the instant the pointer or a tap reached anything that has one, so they flickered up and away while you moved across the screen"
+                }
+            ]
+        },
+        {
             "version": "0.6.3.m115",
             "requiredVersion": "0.6.1",
             "phase": "beta",
